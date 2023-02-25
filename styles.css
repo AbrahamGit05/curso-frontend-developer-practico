@@ -60,10 +60,13 @@
   }
   .navbar-email {
     cursor: pointer;
-    
+    user-select: none;
     color: var(--very-light-pink);
     font-size: var(--sm);
     margin-right: 12px;
+    border: 1px solid var(--hospital-green);
+    padding: 8px;
+    border-radius: 8px;
     
   }
   .navbar-shopping-cart {
