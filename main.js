@@ -1,3 +1,5 @@
+//@ts-check
+
 const s_ = (selector) => 
 document.querySelector(selector);
 
@@ -48,32 +50,30 @@ if (!isMobileMenuClosed) {
         aside.classList.toggle('inactive')
 }
 
-const productList = []
-productList.push = {
-    price: 120,
-    name: 'Bike',
-    Image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-}
-
-productList.push = {
-    price: 120,
-    name: 'Bike',
-    Image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-}
-
-productList.push = {
-    price: 120,
-    name: 'Bike',
-    Image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-}
+const productList = [];
+productList.push({
+  name: 'Bike',
+  price: 120,
+  image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+});
+productList.push({
+  name: 'Pantalla',
+  price: 220,
+  image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+});
+productList.push({
+  name: 'Compu',
+  price: 620,
+  image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+});
      
 function renderProducts(arr){
-    for (product of arr){
+    for (let product of arr){
         const productCard = document.createElement('div')
         productCard.classList.add('product-card');
 
         const productImg = document.createElement('img')
-        productCard.setAttribute.add('src', product.image);
+        productImg.setAttribute('src', product.image);
 
         const productDivInfo = document.createElement('div')
         productDivInfo.classList.add('product-info');
@@ -89,7 +89,7 @@ function renderProducts(arr){
         const productFigure = document.createElement('figure');
 
         const productCardImg = document.createElement('img')
-        productCardImg.setAttribute.add('src', "./icons/bt_add_to_cart.svg");
+        productCardImg.setAttribute('src', "./icons/bt_add_to_cart.svg");
 
         productDiv.appendChild(productPrice)
         productDiv.appendChild(productName)
