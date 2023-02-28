@@ -10,10 +10,17 @@ const menuCarritoIcon = s_('.navbar-shopping-cart');
 const mobileMenu= s_('.mobile-menu');
 const aside = s_('.product-detail')
 const cardsContainer = s_('.cards-container');
+const carritoInfo = s_('.product-detail');
+const cerrarCarritoInfo = s_('product-detail-secundary-close')
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 HamburguerIcon.addEventListener('click', toggleMobileMenu);
 menuCarritoIcon.addEventListener('click', toggleCarritoAside);
+carritoInfo.addEventListener('click', toggleCerrarCarritoInfo);
+
+function toggleCerrarCarritoInfo (){
+    cerrarCarritoInfo.classList.toggle('inactive')
+}
 
 function toggleDesktopMenu() {
 
