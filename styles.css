@@ -170,11 +170,12 @@
 
 .product-detail {
     background-color: var(--white);
-    width: 360px;
     padding: 0 24px;
     box-sizing: border-box;
     position: absolute;
     right: 0;
+    height: 100%;
+    
   }
   .title-container {
     display: flex;
@@ -182,6 +183,7 @@
   .title-container img {
     transform: rotate(180deg);
     margin-right: 14px;
+    
   }
   .title {
     font-size: var(--lg);
@@ -262,6 +264,7 @@
   height: 240px;
   border-radius: 20px;
   object-fit: cover;
+  cursor: pointer;
 }
 .product-info {
   display: flex;
@@ -382,6 +385,8 @@
         width: 140px;
         height: 140px;
       }
+      .product-detail-secundary {
+        width: 100%;
   }
 
   @media (min-width: 641px) {
